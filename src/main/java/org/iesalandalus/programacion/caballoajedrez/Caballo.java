@@ -16,4 +16,27 @@ public class Caballo {
     private Color color;
     private Posicion posicion;
     
+    //Ejercicio 12
+   //getter y setter de color:
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    
+    // getter y setter de posicion:
+    
+    public Posicion getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(Posicion posicion) {
+        this.posicion = posicion;
+    }
+    
+    
 }
