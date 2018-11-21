@@ -54,7 +54,35 @@ public class Posicion {
      
     }
     
- 
     
+    // Constructores:
     
+    public Posicion(int fila, char columna)throws IllegalArgumentException {
+        char a='a';
+        char h='h';
+        
+        if(fila>=1 && fila<=8){
+            
+        this.fila = fila;
+        
+        }else{
+            
+            System.out.println("El número introducido no corresponde a ninguna fila del tablero");
+       
+        }
+        
+        if((int)columna>=(int)a && (int)columna<=(int)h){
+        
+        this.columna = columna;
+        
+        }else{
+                
+        System.out.println("La letra introducida no corresponde a ninguna columna del tablero");
+        
+        }   
+    }
+   
 }
+
+
+
