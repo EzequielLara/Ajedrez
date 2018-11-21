@@ -46,7 +46,27 @@ public class Caballo {
                 
     }
     
+    // Ejercicio 14. Constructor con un solo parámetro.
+    // Tengo dudas de si emplear color.equals(Color.BLANCO) o color == Color.Blanco
+    //como son dos objetos emplearé equals.
     
     
+     public Caballo(Color color){
+        
+        if(color.equals(Color.BLANCO)){
+          
+          this.color = Color.BLANCO;
+          this.posicion = new Posicion(1,'b');
+          
+        }else{
+            
+          this.color = Color.NEGRO;
+          this.posicion = new Posicion(8,'b');
+          
+        }
+     
+    }
+     
+     
     
 }
