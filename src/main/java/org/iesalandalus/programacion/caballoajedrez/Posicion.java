@@ -81,6 +81,14 @@ public class Posicion {
         
         }   
     }
+    
+    //Constructor Copia
+    
+    public Posicion (final Posicion y){
+        
+        this.fila = y.fila;
+        this.columna = y.columna;
+    }
    
 }
 
