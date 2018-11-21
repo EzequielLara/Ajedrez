@@ -68,5 +68,30 @@ public class Caballo {
     }
      
      
-    
+     // Ejercicio 15. Constructor de dos parámetros
+     
+     
+     
+      public Caballo(Color color, char columna) throws IllegalArgumentException{
+          
+        if(color.equals(Color.BLANCO)){
+          
+          this.color = Color.BLANCO;
+          this.posicion= new Posicion(1,columna);
+          
+        }
+        if(color.equals(Color.NEGRO)){
+            
+          this.color = Color.NEGRO;
+          this.posicion = new Posicion(8,columna);
+          
+        }
+        if(columna!='b' && columna!='g'){
+            System.out.println("El caballo debe iniciar en la columna b o la columna g");
+        }
+              
+      }
+        
+        
+     
 }
