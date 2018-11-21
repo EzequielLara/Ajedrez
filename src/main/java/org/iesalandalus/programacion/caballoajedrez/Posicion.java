@@ -89,8 +89,44 @@ public class Posicion {
         this.fila = y.fila;
         this.columna = y.columna;
     }
+    
+    
+    //Método Equals Ejercicio 9.
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + this.fila;
+        hash = 79 * hash + this.columna;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Posicion other = (Posicion) obj;
+        if (this.fila != other.fila) {
+            return false;
+        }
+        if (this.columna != other.columna) {
+            return false;
+        }
+        return true;
+    }
+    
    
-}
+    
+ 
+    }
+   
 
 
 
