@@ -123,6 +123,13 @@ public class Posicion {
     }
     
    
+    //Método toString. Ejercicio 10.
+
+    @Override
+    public String toString() {
+        return "Posicion{" + "fila=" + fila + ", columna=" + columna + '}';
+    }
+    
     
  
     }
