@@ -13,4 +13,48 @@ public class Posicion {
     
     private int fila;
     private char columna;
+
+   // Getter y Setter Fila
+    
+    public int getFila() {
+        return fila;
+    }
+
+    public void setFila(int fila) throws IllegalArgumentException {
+        if(fila>=1 && fila<=8){
+            
+        this.fila = fila;
+        
+        }else{
+            
+            System.out.println("El número introducido no corresponde a ninguna fila del tablero");
+        }
+    }
+       
+
+    // Getter y Setter Columna
+    
+    public char getColumna() {
+        return columna;
+    }
+
+    public void setColumna(char columna) throws IllegalArgumentException {
+       char a='a';
+       char h='h';
+     
+        if((int)columna>=(int)a && (int)columna<=(int)h){
+        
+        this.columna = columna;
+        
+        }else{
+                
+        System.out.println("La letra introducida no corresponde a ninguna columna del tablero");
+        
+        }
+     
+    }
+    
+ 
+    
+    
 }
