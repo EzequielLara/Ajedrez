@@ -5,6 +5,7 @@
  */
 package org.iesalandalus.programacion.caballoajedrez;
 
+import java.util.Objects;
 import javax.naming.OperationNotSupportedException;
 
 /**
@@ -172,11 +173,45 @@ public class Caballo {
               
               posicion.setFila(arriba);
               posicion.setColumna(izquierda);
+              
           }else{
             
                  System.out.println("El caballo se sale de las dimensiones del tablero");    
              }
       }
+
+      
+      // Ejercicio 18. Método equals
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.color);
+        hash = 79 * hash + Objects.hashCode(this.posicion);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Caballo other = (Caballo) obj;
+        if (this.color != other.color) {
+            return false;
+        }
+        if (!Objects.equals(this.posicion, other.posicion)) {
+            return false;
+        }
+        return true;
+    }
+      
+      
         
      
 }
