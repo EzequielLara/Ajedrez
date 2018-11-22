@@ -5,6 +5,8 @@
  */
 package org.iesalandalus.programacion.caballoajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 /**
  *
  * @author Ezk24
@@ -92,6 +94,89 @@ public class Caballo {
               
       }
         
+      //Ejercicio 17. Metodo mover, para lanzar la excepcion he tenido que importar un paquete.
+      
+      public void mover(Direccion direccion) throws OperationNotSupportedException{
+         
+          int y = posicion.getFila();
+          char x = posicion.getColumna();
+          int arriba, abajo;
+          char izquierda, derecha;
+          
+          if(direccion.equals(Direccion.ARRIBA_DERECHA)){
+             
+              arriba = y+2;
+              derecha = ++x;        
+              posicion.setFila(arriba);
+              posicion.setColumna(derecha);
+          }
+          
+          if(direccion.equals(Direccion.ARRIBA_IZQUIERDA)){
+          
+              arriba = y+2;
+              izquierda = --x;
+              
+              posicion.setFila(arriba);
+              posicion.setColumna(izquierda);
+          }
+      
+           if(direccion.equals(Direccion.ABAJO_DERECHA)){
+          
+               abajo = y-2;
+               derecha = ++x;
+              
+              posicion.setFila(abajo);
+              posicion.setColumna(derecha);
+          }
+           
+           if(direccion.equals(Direccion.ABAJO_IZQUIERDA)){
+          
+               abajo = y-2;
+               izquierda = --x;
+              
+              posicion.setFila(abajo);
+              posicion.setColumna(izquierda);
+          }
+           
+            if(direccion.equals(Direccion.DERECHA_ARRIBA)){
+          
+               arriba = y+1;
+               derecha =(char)(x+2);
+              
+              posicion.setFila(arriba);
+              posicion.setColumna(derecha);
+          }
+      
+             if(direccion.equals(Direccion.DERECHA_ABAJO)){
+          
+               abajo = y-1;
+               derecha = (char)(x+2);
+              
+              posicion.setFila(abajo);
+              posicion.setColumna(derecha);
+          }
+      
+             if(direccion.equals(Direccion.IZQUIERDA_ABAJO)){
+          
+               abajo = y-1;
+               izquierda = (char)(x-2);
+              
+              posicion.setFila(abajo);
+              posicion.setColumna(izquierda);
+          }
+             
+             if(direccion.equals(Direccion.IZQUIERDA_ARRIBA)){
+          
+               arriba = y+1;
+               izquierda = (char)(x-2);
+              
+              posicion.setFila(arriba);
+              posicion.setColumna(izquierda);
+          }else{
+            
+                 System.out.println("El caballo se sale de las dimensiones del tablero");    
+             }
+      }
         
      
 }
