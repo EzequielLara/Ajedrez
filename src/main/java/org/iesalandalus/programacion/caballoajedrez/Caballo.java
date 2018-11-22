@@ -211,6 +211,15 @@ public class Caballo {
         return true;
     }
       
+    
+    // Ejercicio 19. Método toString
+
+    @Override
+    public String toString() {
+        return "Caballo{" + "color=" + color + ", posicion=" + posicion + '}';
+    }
+    
+    
       
         
      
